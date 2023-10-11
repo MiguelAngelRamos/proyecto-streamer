@@ -22,7 +22,7 @@ videoCards.forEach(item => {
   console.log(item);
   item.addEventListener('mouseover', () => {
     let video = item.children[1];
-    console.log(video);
+
     video.play();
   });
 

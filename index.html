@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts Begin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts End -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Movie Plus</title>
+</head>
+<body>
+
+  <nav class="navbar">
+
+    <img src="https://m.media-amazon.com/images/G/01/digital/video/web/Logo-min.png"  class="brand-logo" alt="logo de Movie Plus">
+
+    <ul class="nav-links">
+      <li class="nav-items"><a href="">Tv</a></li>
+      <li class="nav-items"><a href="">movies</a></li>
+      <li class="nav-items"><a href="">sports</a></li>
+      <li class="nav-items"><a href="">premium</a></li>
+    </ul>
+  
+    <div class="right-container">
+      <input type="text" class="search-box" placeholder="search"/>
+      <button class="sub-btn">subcribe</button>
+      <a href="#" class="login-link">login</a>
+    </div>
+
+  </nav>
+
+  <div class="carousel-container">
+    <div class="carousel" id="carousel-slider">
+    </div>
+  </div>
+  <!-- <p style="white-space: pre-line;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.  termina aqui 1.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudi 2.
+  </p> -->
+
+  <div class="video-card-container">
+
+    <div class="video-card">
+      <img class="video-card-image" src="images/disney.PNG"  alt="">
+      <video class="card-video" mute loop src="videos/disney.mp4" ></video>
+    </div>
+
+    <div class="video-card">
+      <img class="video-card-image" src="images/pixar.PNG"  alt="">
+      <video class="card-video" mute loop src="videos/pixar.mp4" ></video>
+    </div>
+    
+    <div class="video-card">
+      <img class="video-card-image" src="images/marvel.PNG"  alt="">
+      <video class="card-video" mute loop src="videos/marvel.mp4" ></video>
+    </div>
+
+    <div class="video-card">
+      <img class="video-card-image" src="images/star-wars.PNG"  alt="">
+      <video class="card-video" mute loop src="videos/star-war.mp4" ></video>
+    </div>
+
+    <div class="video-card">
+      <img class="video-card-image" src="images/geographic.PNG"  alt="">
+      <video class="card-video" mute loop src="videos/geographic.mp4" ></video>
+    </div>
+
+  </div>
+
+  <h1 class="title">Series mas populares recomendadas para ti</h1>
+
+  <div class="movies-list">
+    <div class="card-container">
+      <!-- aqui van las tarjetas -->
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

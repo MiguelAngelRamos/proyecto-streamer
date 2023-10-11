@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #0c111b;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 4%;
+  background: #0c111b;
+  z-index: 9;
+  display: flex;
+  align-items: center; /* centrado vertical*/
+}
+
+.brand-logo {
+  height: 40px;
+}
+
+.nav-links {
+  margin-top: 10px;
+  display: flex;
+  list-style: none;
+}
+
+.nav-items a {
+  text-decoration: none;
+  margin-left: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.right-container {
+  display: block;
+  margin-left: auto;
+}
+
+.search-box {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  outline: none; /* Elimina el contorno que aparece al hacer click */
+  height: 30px;
+  color: #fff;
+  width: 250px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.search-box:focus {
+  width: 400px;
+  border-color: #1f80e0;
+}
+
+.sub-btn {
+  background: #1f80e0;
+  height: 30px;
+  /* padding: 0 20px 0 20px; */
+  padding: 0 20px;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+.login-link {
+  color: #fff;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  overflow-x: hidden;
+  margin-top: 85px;
+  border-radius: 20px;
+}
+
+.carousel {
+  display: flex;
+  width: 92%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  background: #000;
+  border-radius: 15px;
+}
+.slider {
+  flex: 0 0 auto;  /* Define el crecimiento, la disminución y la base del flex del slider a 0, 0 y automático, respectivamente */
+  margin-right: 30px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  width: 100%;
+  height: 450px;
+  left: 0;
+  transition: 1s;
+  overflow: hidden; /* oculta el contenido que se desborda del slider*/
+}
+
+.slider img {
+  width: 70%;
+  min-height: 100%;
+  object-fit: cover; /* hace la imagen cubra completamente el espacio del slider y se recorta si es necesario*/
+  display: block;
+  margin-left: auto;
+}
+
+.slider-content {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, #030b17 80%, #0c111b00);
+  color: #fff;
+}
+
+.movie-title {
+  padding-left: 50px;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+
+.movie-des {
+  line-height: 30px;
+  margin-top: 30px;
+  opacity: 0.8;
+  padding-left: 50px;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 80%;
+}
+
+.video-card-container {
+  position: relative;
+  width: 92%;
+  margin: auto;
+  height: 10vw; /* la altura del elemento sera el 10% del ancho de la ventana del viewport */
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.video-card {
+  position: relative;
+  min-width: calc(100%/5 - 10px);
+  width: calc(100%/5 - 10px);
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #030b17;
+}
+
+.video-card-image, .card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-video {
+  position: absolute;
+}
+
+.video-card:hover .video-card-image {
+  display: none;
+}
+
+.title {
+  color: #fff;
+  opacity: 0.9;
+  padding-left: 4%;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.movie-list {
+  position: relative;
+  width: 92%;
+  margin: auto;
+  height: 10vw;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.card-container {
+  position: absolute;
+  width: 90%;
+  padding-left: 10px;
+  height: 220px;
+  display: flex;
+  margin: 0 70px;
+  align-items: center;
+  overflow-x: auto; /* Habilita una barra de desplazamiento horizontal, cuando nuestro contenido desborda su ancho*/
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+
+.card {
+  position: relative;
+  min-width: 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: .5s;
+  background: #000;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*
+TODO: debo tomar como referencia estas clases que estan en el archivo de javascript
+*  card.className = 'card';
+  img.className = 'card-img';
+  cardBody.className = 'card-body';
+  h2.className = 'name';
+  p.className = 'des';
+  button.className = 'watchlist-btn';
+*/

@@ -1,6 +1,7 @@
+import { truncate } from "../utility/trucate.js";
+
 let containerCard = document.querySelector('.card-container');
 
-const truncate = (str, limit = 45, trail = '...') => str.length > limit ? str.substring(0, limit) + trail : str;
 
 //* comienzo a crear la tarjeta
 const cardMovie = (movie) => {
@@ -25,7 +26,7 @@ const cardMovie = (movie) => {
   img.src = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
   img.alt = 'Poster de la pelicula';
   h2.innerText  = movie.original_title;
-  p.innerText = truncate(movie.overview);
+  p.innerText = truncate(movie.overview, 45);
   button.innerHTML = 'Añadir a favoritos';
   
   //* jerarquia

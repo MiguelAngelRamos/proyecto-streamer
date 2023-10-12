@@ -19,7 +19,6 @@ getMoviePopular();
 const videoCards  = [...document.querySelectorAll('.video-card')];
 
 videoCards.forEach(item => {
-  console.log(item);
   item.addEventListener('mouseover', () => {
     let video = item.children[1];
 
@@ -31,3 +30,23 @@ videoCards.forEach(item => {
     video.pause();
   });
 });
+
+const cardContainers = [...document.querySelectorAll('.card-container')];
+const preBtns = [...document.querySelectorAll('.pre-btn')];
+const nextBtns = [...document.querySelectorAll('.nxt-btn')];
+
+cardContainers.forEach((item, i ) => {
+  console.log(item);
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+
+  nextBtns[i].addEventListener('click', () => {
+    item.scrollLeft += containerWidth - 200;
+  }) 
+
+  preBtns[i].addEventListener('click', () => {
+    item.scrollLeft -= containerWidth +200;
+  })
+
+
+})
